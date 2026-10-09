@@ -1,71 +1,338 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="Online resume of Jeremy A. Henry: author, ordained minister, and Linux &amp; network tech. Projects include Valerie, a personal AI assistant for Linux."/>
-    <link rel="canonical" href="https://htmlgifted-cyber.github.io/"/>
-    <link rel="me" href="https://www.jeremyahenry.com"/>
-    <title>Jeremy A. Henry - Online Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-    <!--Using jQuery and jQuery UI for display effects-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy A. Henry - Author, Minister &amp; Linux Tech | Online Resume</title>
+  <meta name="description" content="Online resume of Jeremy A. Henry: author and self-publisher, ordained minister, and Linux &amp; network tech. Projects include Valerie, a personal AI assistant for Linux.">
+  <link rel="canonical" href="https://htmlgifted-cyber.github.io/">
+  <link rel="me" href="https://www.jeremyahenry.com">
+  <meta name="theme-color" content="#1f3d2b">
 
-    <!--Using the hamburger menu display code-->
-    <script src="js/hamburger.js"></script>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jeremy A. Henry - Online Resume">
+  <meta property="og:description" content="Author, ordained minister, and Linux &amp; network tech who builds his own tools.">
+  <meta property="og:url" content="https://htmlgifted-cyber.github.io/">
+  <meta property="og:image" content="https://htmlgifted-cyber.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
 
-    <!--Using Media Queries, if the viewport is smaller than 700px use another stylesheet-->
-    <link rel="stylesheet" type="text/css" media="all" href="css/hamburger.css"/>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jeremy A. Henry",
+    "url": "https://htmlgifted-cyber.github.io/",
+    "image": "https://htmlgifted-cyber.github.io/assets/img/profile.jpg",
+    "jobTitle": "Author, Ordained Minister, Linux & Network Technician",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Jackson Community College"},
+      {"@type": "EducationalOrganization", "name": "Foley Belsaw Institute"}
+    ],
+    "knowsAbout": ["Linux administration", "Bash", "Python", "Network security", "Web design", "AI assistants", "Self-publishing"],
+    "sameAs": [
+      "https://www.jeremyahenry.com",
+      "https://github.com/HtmlGifted-cyber",
+      "https://www.linkedin.com/in/jeremyahenry"
+    ]
+  }
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!--This wrapping container is used to get the width of the whole content-->
-<div id="container">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Jeremy A. Henry, back to top">
+        <span class="brand-mark" aria-hidden="true">JH</span>
+        <span class="brand-name">Jeremy A. Henry</span>
+      </a>
 
-    <!--The Hamburger Button in the Header-->
-    <header>
-        <div id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#ministry">Ministry</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-backdrop" hidden></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Online resume</p>
+          <h1>Jeremy A. Henry</h1>
+          <p class="tagline">Author &middot; Ordained Minister &middot; Linux &amp; Network Tech</p>
+          <p class="lead">I write books, officiate life's big moments, and build my own tools on Linux, from bash toolboxes to a personal AI assistant that runs on your own computer.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn btn-ghost" href="https://www.jeremyahenry.com" target="_blank" rel="noopener">Visit jeremyahenry.com</a>
+            <button class="btn btn-ghost" type="button" data-print>Print resume</button>
+          </div>
+          <ul class="quick-facts" aria-label="At a glance">
+            <li><strong>15+</strong> years in IT &amp; web</li>
+            <li><strong>10+</strong> years ordained</li>
+            <li><strong>Linux</strong> since Ubuntu 14.04</li>
+          </ul>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/img/profile.jpg" width="560" height="560" alt="Jeremy A. Henry, smiling">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">About</h2>
+        <p>I've been fixing computers, building networks and writing code since the dial-up days. I studied personal computer programming at Foley Belsaw Institute and later at Jackson Community College, where I made the Dean's List.</p>
+        <p>Today I run my own publishing on Linux as an author, keep a growing open-source toolbox of bash scripts, and build <a href="https://github.com/HtmlGifted-cyber/valerie-assistant" target="_blank" rel="noopener">Valerie</a>, a personal AI assistant that lives on your own computer. I'm also an ordained minister with the Universal Life Church and the Church of Spiritual Humanism.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">Open source on GitHub. Star counts and update dates load live.</p>
+
+        <div class="cards">
+          <article class="card card-featured" data-repo="valerie-assistant">
+            <div class="card-tag">Featured</div>
+            <h3>Valerie Assistant</h3>
+            <p>A personal AI assistant for Linux that runs on your own computer: local AI chat, separate workspaces, email, voice and hands-free talk mode, daily check-ins, and even Roku TV control.</p>
+            <ul class="tech"><li>Python</li><li>Tkinter</li><li>Ollama</li><li>Voice</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/valerie-assistant" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card" data-repo="configs">
+            <h3>configs</h3>
+            <p>Bash configs and a 29-tool command-line toolbox for Ubuntu: safety aliases, network and system scripts, one-command GitHub sync, and a dependency checker. Originally by Gary DeLaney; I've extended it since 14.04.</p>
+            <ul class="tech"><li>Bash</li><li>Linux</li><li>nmap</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/configs" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card" data-repo="gitscripts">
+            <h3>gitscripts</h3>
+            <p>Scripts that make Git pushing and merging faster, plus network checks, SSH and SSHFS mounts, and folder syncing.</p>
+            <ul class="tech"><li>Shell</li><li>PHP</li><li>Git</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/gitscripts" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card" data-repo="HtmlGifted-cyber.github.io">
+            <h3>This website</h3>
+            <p>Hand-written HTML, CSS and a little JavaScript. No frameworks: mobile-first, accessible menu, print-ready resume.</p>
+            <ul class="tech"><li>HTML5</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/HtmlGifted-cyber.github.io" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card" data-repo="mobile-site-template">
+            <h3>Mobile site template</h3>
+            <p>A starting point that makes a web page friendlier on phones and tablets.</p>
+            <ul class="tech"><li>HTML</li><li>CSS</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/mobile-site-template" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card" data-repo="mobile-menu-hamburger-github-resume">
+            <h3>Mobile menu hamburger</h3>
+            <p>The mobile menu used on the first version of this resume, based on ymc-thzi/mobile-menu-hamburger.</p>
+            <ul class="tech"><li>CSS</li><li>jQuery</li></ul>
+            <div class="card-meta" aria-live="polite"></div>
+            <a class="card-link" href="https://github.com/HtmlGifted-cyber/mobile-menu-hamburger-github-resume" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
         </div>
 
-    </header>
-
-    <!--The mobile navigation Markup hidden via css-->
-    <nav>
-        <ul>
-	    <li><span><strong><a href="c/index.html" target="fm">Home</a></strong></span></li>
-            <li><span><strong><a href="c/ed/index.html" target="fm">My Education</a></strong></span></li>
-            <li><span><strong><a href="c/ex/index.html" target="fm">My Experience</a></strong></span></li>
-            <li><span><strong><a href="c/skills/index.html" target="fm">Skills</a></strong></span></li>
-            <li><span><strong><a href="c/github/index.html" target="fm">My Github</a></strong></span></li>
-	    <li><span><strong><a href="c/pdf/index.html" target="fm">Resume PDF</a></strong></span></li>
-	    <li><span><strong> <a href="c/contact/index.html" target="fm">Contact me</a></strong></span></li>
-        </ul>
-    </nav>
-
-    <!--The Layer that will be layed over the content
-    so that the content is unclickable while menu is shown-->
-    <div id="contentLayer"></div>
-
-    <!--The content of the site-->
-    <div id="content">
-       <div id="about">
-  <div id="story">
-
-      <p>  
-<iframe id="fm" name="fm" style="position:fixed;margin-top:-1px;width:100%;height:100%" frameborder="0" src="c/index.html" sandbox="allow-forms allow-popups allow-pointer-lock allow-same-origin allow-scripts" scrolling="auto"></iframe>	    
-          </p>  
-               <br class="clear-both" />
-         </div>
+        <p class="center"><a class="btn btn-ghost" href="https://github.com/HtmlGifted-cyber" target="_blank" rel="noopener">All repositories on GitHub</a></p>
       </div>
-      
+    </section>
 
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-group">
+            <h3>Systems &amp; networks</h3>
+            <ul class="chips">
+              <li>Linux (Ubuntu, Xubuntu, Kali)</li><li>Windows 95 to 10</li><li>Windows Server 2008-2012</li>
+              <li>TCP/IP</li><li>802.11 Wi-Fi</li><li>Routers &amp; switches</li><li>Cisco / Linksys</li><li>RJ-11 &amp; RJ-45 cabling</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Security</h3>
+            <ul class="chips">
+              <li>Network scanning (nmap)</li><li>Firewalls (ufw)</li><li>Tor</li><li>SSH / SSHFS</li><li>Kali / BackTrack</li><li>Endpoint protection</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <ul class="chips">
+              <li>Bash &amp; shell</li><li>Python</li><li>PHP</li><li>HTML5 &amp; CSS</li><li>JavaScript</li><li>C / C++</li><li>Java</li><li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; automation</h3>
+            <ul class="chips">
+              <li>Local AI (Ollama)</li><li>AI assistants</li><li>Voice interfaces</li><li>Google Workspace</li><li>Apps Script</li><li>rclone &amp; backups</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Web &amp; publishing</h3>
+            <ul class="chips">
+              <li>Website design</li><li>WordPress</li><li>Google Sites</li><li>GitHub Pages</li><li>SEO</li><li>Amazon KDP</li><li>Affiliate marketing</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Hardware &amp; software</h3>
+            <ul class="chips">
+              <li>Dell, HP, IBM, Compaq</li><li>Servers &amp; laptops</li><li>Printers &amp; scanners</li><li>MS Office / LibreOffice</li><li>GIMP</li><li>FileZilla</li><li>TeamViewer</li><li>Spiceworks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li>
+            <div class="when">Present</div>
+            <h3>Author &amp; Self-Publisher</h3>
+            <p class="where"><a href="https://www.jeremyahenry.com" target="_blank" rel="noopener">Jeremy A. Henry</a></p>
+            <ul>
+              <li>Books and series on Amazon KDP, including the Tire Kicker's Guide series</li>
+              <li>Brands: Wildman Chronicles, RVLifer and Nomad Life</li>
+              <li>Runs his own publishing, website and automation stack on Linux</li>
+            </ul>
+          </li>
+          <li>
+            <div class="when">2010 - Present</div>
+            <h3>Programmer &amp; Network Security Analyst</h3>
+            <p class="where">Henry Web Design and Security</p>
+            <ul>
+              <li>Website and graphic design</li>
+              <li>Network and cyber security</li>
+              <li>Linux administration, Bash and Python tooling</li>
+              <li>AI assistant and workflow automation (local AI, Google Workspace, Apps Script)</li>
+            </ul>
+          </li>
+          <li>
+            <div class="when">Jan 2016 - Present</div>
+            <h3>Ordained Clergy Person</h3>
+            <p class="where">Universal Life Church Monastery &middot; Church of Spiritual Humanism</p>
+            <ul>
+              <li>Weddings, baby namings, funerals, handfastings, commitment and renewal ceremonies, invocations and holiday services</li>
+            </ul>
+          </li>
+          <li>
+            <div class="when">Sep 2015 - Nov 2016</div>
+            <h3>Contract Quality Inspector</h3>
+            <p class="where">CER Group N.A.</p>
+            <ul>
+              <li>Quality inspection of manufactured parts</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-grid">
+          <article class="edu-card">
+            <img src="assets/img/graduation.jpg" width="720" height="1280" loading="lazy" alt="Jeremy at his college graduation">
+            <div class="edu-body">
+              <h3>Jackson Community College</h3>
+              <p class="when">2012 - 2015</p>
+              <p>Dean's List, Spring 2013.</p>
+            </div>
+          </article>
+          <article class="edu-card">
+            <img src="assets/img/foley-belsaw-diploma.jpg" width="640" height="480" loading="lazy" alt="Foley Belsaw Institute diploma in Personal Computer Programming">
+            <div class="edu-body">
+              <h3>Foley Belsaw Institute</h3>
+              <p class="when">2009 - 2011</p>
+              <p>Diploma, Personal Computer Programming.</p>
+            </div>
+          </article>
+          <article class="edu-card">
+            <img src="assets/img/deans-list.jpg" width="720" height="960" loading="lazy" alt="Jackson College Dean's List certificate">
+            <div class="edu-body">
+              <h3>Dean's List</h3>
+              <p class="when">Jackson College</p>
+              <p>Recognized for academic achievement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministry -->
+    <section id="ministry" class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title">Ministry</h2>
+        <p>Ordained on January 17, 2016 as an Ordained Clergy Person with the Universal Life Church and the Church of Spiritual Humanism. I'm happy to officiate:</p>
+        <ul class="chips chips-lg">
+          <li>Weddings</li><li>Renewal of vows</li><li>Handfasting</li><li>Commitment ceremonies</li><li>Affirmation of love</li>
+          <li>Baby naming</li><li>Funerals &amp; memorials</li><li>Invocations</li><li>Holiday ceremonies</li>
+        </ul>
+        <p class="muted">If your tradition includes a ceremony not listed here, ask. I'll gladly perform it as long as it breaks no law and harms no one.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container narrow center">
+        <h2 class="section-title">Let's connect</h2>
+        <p>The best way to reach me is through my main website.</p>
+        <div class="hero-actions center">
+          <a class="btn btn-primary" href="https://www.jeremyahenry.com" target="_blank" rel="noopener">Contact me at jeremyahenry.com</a>
+        </div>
+        <ul class="social">
+          <li><a href="https://github.com/HtmlGifted-cyber" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.040-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.840 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span>GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/jeremyahenry" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg><span>LinkedIn</span></a></li>
+          <li><a href="https://www.facebook.com/379104449216025" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg><span>Facebook</span></a></li>
+          <li><a href="https://twitter.com/The_BTCNomad" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.970 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></svg><span>X</span></a></li>
+          <li><a href="https://www.jeremyahenry.com" target="_blank" rel="noopener" aria-label="Website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5c2.6 2.6 4 6 4 9.5s-1.4 6.9-4 9.5c-2.6-2.6-4-6-4-9.5s1.4-6.9 4-9.5Z" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Website</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2012 - <span data-year>2026</span> HtmlGifted &middot; Jeremy A. Henry</p>
+      <p class="muted">Formerly <a href="https://github.com/htmlgifted" target="_blank" rel="noopener">@htmlgifted</a> &middot; <a href="https://github.com/HtmlGifted-cyber/HtmlGifted-cyber.github.io" target="_blank" rel="noopener">Site source</a></p>
     </div>
+  </footer>
 
-</div>
-
+  <a class="to-top" href="#top" aria-label="Back to top" hidden>&uarr;</a>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
