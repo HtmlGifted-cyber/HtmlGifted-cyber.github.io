@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /images/
+Disallow: /css
+Disallow: /js
+
+Sitemap: <http://www.jeremyahenry.com/sitemap.xml>
